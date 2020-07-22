@@ -142,6 +142,7 @@ def seven(input):
 
 # You may need to create a list of numbers from 0 to i, take a look at help(range).
 
+
 def eight(input):
     return 1
 
@@ -181,9 +182,17 @@ def nine(inputString, char):
 # ten("AAbb",1,'b') → False
 # ten("Hi-There",10,'e') → False
 
-# <HINT>
-
-# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
-
 def ten(string, int, char):
-    return False
+    string = string.lower()
+    char = char.lower()
+
+    if len(string) <= int:
+        output = False
+
+    else:
+        if string[int - 1] == char:
+            output = True
+        else:
+            output = False
+
+    return output

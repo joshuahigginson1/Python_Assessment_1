@@ -127,25 +127,24 @@ def seven(input):
     return vowel_count
 
 
-# <QUESTION 8>
-
-# Write a function which takes an input (between 1 and 10 inclusive) and multiplies it by all the numbers before it.
-# eg If the input is 4, the function calculates 4x3x2x1 = 24
-
-# <EXAMPLES>
-
-# eight(1) → 1
-# eight(4) → 24
-# eight(8) → 40320
-
-# <HINT>
-
-# You may need to create a list of numbers from 0 to i, take a look at help(range).
-
-
 def eight(input):
-    return 1
 
+    factorial = input
+    factorial_list = []
+    output = 1
+
+    if input == 1:
+        output = 1
+
+    else:
+        while factorial > 0:
+            factorial_list.append(factorial)
+            factorial = factorial - 1
+
+        for number in factorial_list:
+            output *= number
+
+    return output
 
 # <QUESTION 9>
 

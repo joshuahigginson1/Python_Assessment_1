@@ -96,24 +96,6 @@ def five(input):
     return []
 
 
-"""
-
-<QUESTION 6>
-
-There is a well known mnemonic which goes "I before E, except after C",
-which is used to determine which order "ei" or "ie" should be in a word.
-
-Write a function which returns the boolean True if a string follows the mnemonic, and returns the boolean False if not.
-
-<EXAMPLES>
-
-six("ceiling") → True
-six("believe") → True
-six("glacier") → False
-six("height") → False
-"""
-
-
 def six(input):
     output = None
 
@@ -134,25 +116,15 @@ def six(input):
     return output
 
 
-six("height")
-
-
-# <QUESTION 7>
-
-# Write a function which returns the integer number of vowels in a given string.
-# You should ignore case.
-
-# <EXAMPLES>
-
-# seven("Hello") → 2
-# seven("hEelLoooO") → 6
-
-# <HINTS>
-
-# How do we ignore case in a String? help(str) may offer some insight.
-
 def seven(input):
-    return 0
+    lower_input = input.lower()
+    list_of_vowels = ['a', 'e', 'i', 'o', 'u']
+    vowel_count = 0
+
+    for vowel in list_of_vowels:
+        vowel_count += lower_input.count(vowel)
+
+    return vowel_count
 
 
 # <QUESTION 8>

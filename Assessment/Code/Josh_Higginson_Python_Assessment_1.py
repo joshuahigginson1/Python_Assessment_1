@@ -128,7 +128,6 @@ def seven(input):
 
 
 def eight(input):
-
     factorial = input
     factorial_list = []
     output = 1
@@ -145,6 +144,7 @@ def eight(input):
             output *= number
 
     return output
+
 
 # <QUESTION 9>
 
@@ -165,7 +165,16 @@ def eight(input):
 # Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-    return -1
+
+    inputString = inputString.strip()
+
+    if char not in inputString:
+        output = -1
+
+    else:
+        output = inputString.find(char) + 1
+
+    return output
 
 
 def ten(string, int, char):

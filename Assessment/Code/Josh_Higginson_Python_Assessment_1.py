@@ -169,19 +169,6 @@ def nine(inputString, char):
     return -1
 
 
-# <QUESTION 10>
-
-# Given a string, int and a char, return a boolean value if the 'nth'
-# (represented by the int provided) char of the String supplied is the same as the char supplied.
-# The int provided will NOT always be less than than the length of the String.
-# IGNORE case and Whitespace.
-
-# <EXAMPLES>
-
-# ten("The",2,'h') → True
-# ten("AAbb",1,'b') → False
-# ten("Hi-There",10,'e') → False
-
 def ten(string, int, char):
     string = string.lower()
     char = char.lower()

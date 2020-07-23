@@ -86,8 +86,35 @@ Dont forget, False is a String, not a Boolean value in the Tests above.
 
 Dev Notes:
 
-split by ,
+first step would be to split the file into one long list by ",".
 
+long_List = input.split(",")
+
+Then we need to check af all the records are encrypted.
+
+Every 3rd record is the encryption. We need to cycle through every 3rd record, we can do this with range.
+(Start, Stop, Step)
+
+Start = index position 2
+Stop = len(long_list) - 1
+Step = every 3 records.
+
+we could append all values to a list for encryption, then check the list for any "False"
+
+for encryption in range(2, (len(long_list)-1), 3):
+    encryption_list.append(encryption)
+
+Don't forget to initialise list outside of for loop, at start of function.
+
+after for loop, outside of for loop, we check to see if there are any strings called "False"
+If there are no strings called "False" in our list, then we can assume that every string is "True" and all files
+are encrypted.
+
+if "False" in encryption_list:
+    output = []
+    
+else:
+    output = True
 
 """
 

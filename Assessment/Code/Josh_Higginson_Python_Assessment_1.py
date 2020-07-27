@@ -88,7 +88,7 @@ Dev Notes:
 
 first step would be to split the file into one long list by ",".
 
-long_List = input.split(",")
+long_list = input.split(",")
 
 Then we need to check af all the records are encrypted.
 
@@ -120,7 +120,18 @@ else:
 
 
 def five(input):
-    return []
+    owner_list = []
+    long_list = input.split(',')
+
+    for encryption in long_list[2::4]:
+        if encryption is "False":
+            owner_list.append(long_list[encryption-2])
+        else:
+            continue
+
+    return owner_list
+
+five("Bert,boolean.py,False,1447,Bert,conditions.py,False,1318,Jeff,loops.py,False,1445")
 
 
 def six(input):
@@ -192,7 +203,6 @@ def eight(input):
 # Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-
     inputString = inputString.strip()
 
     if char not in inputString:
